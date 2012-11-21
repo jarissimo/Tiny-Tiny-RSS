@@ -72,6 +72,8 @@
 
 		if ($_COOKIE["ttrss_lang"] && $_COOKIE["ttrss_lang"] != "auto") {
 			$lang = $_COOKIE["ttrss_lang"];
+		} else {
+			$lang = $_SESSION["language"];
 		}
 
 		/* In login action of mobile version */
