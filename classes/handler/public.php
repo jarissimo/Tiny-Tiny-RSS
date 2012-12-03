@@ -514,6 +514,15 @@ class Handler_Public extends Handler {
 				$_POST["password"] = "";
 
 				$_SESSION["language"] = $_POST["language"];
+
+				if ($_POST["language"] == "auto") {
+					$result = db_query($this->link, "SELECT value FROM ttrss_user_prefs
+						WHERE pref_name = 'USER_LANGUAGE' AND owner_uid = " . $_SESSION["uid"]);
+					if (db_num_rows($result) != 0) {
+						$_SESSION["language"] = db_fetch_result($result, 0, "value");
+					}
+				}
+
 				$_SESSION["ref_schema_version"] = get_schema_version($this->link, true);
 				$_SESSION["bw_limit"] = !!$_POST["bw_limit"];
 
