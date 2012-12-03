@@ -436,6 +436,8 @@ insert into ttrss_prefs (pref_name,type_id,def_value,short_desc,section_id) valu
 
 insert into ttrss_prefs (pref_name,type_id,def_value,short_desc,section_id) values('USER_TIMEZONE', 2, 'UTC', 'User timezone', 1);
 
+insert into ttrss_prefs (pref_name,type_id,def_value,short_desc,section_id) values('USER_LANGUAGE', 2, 'auto', 'User language', 1);
+
 insert into ttrss_prefs (pref_name,type_id,def_value,short_desc,section_id,help_text) values('USER_STYLESHEET', 2, '', 'Customize stylesheet', 2, 'Customize CSS stylesheet to your liking');
 
 insert into ttrss_prefs (pref_name,type_id,def_value,short_desc,section_id,help_text) values('SORT_HEADLINES_BY_FEED_DATE', 1, 'true', 'Sort headlines by feed date',2, 'Use feed-specified date to sort headlines instead of local import date.');

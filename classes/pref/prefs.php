@@ -502,6 +502,12 @@ class Pref_Prefs extends Handler_Protected {
 				$timezones = explode("\n", file_get_contents("lib/timezones.txt"));
 
 				print_select($pref_name, $value, $timezones, 'dojoType="dijit.form.FilteringSelect"');
+
+			} else if ($pref_name == "USER_LANGUAGE") {
+
+				print_select_hash("USER_LANGUAGE", $value, get_translations(),
+					"dojoType='dijit.form.Select'");
+
 			} else if ($pref_name == "USER_STYLESHEET") {
 
 				print "<button dojoType=\"dijit.form.Button\"
